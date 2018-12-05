@@ -11,12 +11,12 @@ import java.util.Map;
 
 
 @Controller
-public class MainController {
+public class HomeController {
     @RequestMapping({"/","/home"}) // Обрабатывать запросы на получение
 // главной страницы
     public String showHomePage(Map<String, Object> model) {
         model.put("spittles", "Hello,word"); //Добавить сообщения в модель
-        return "index"; // Вернуть имя представления
+        return "home"; // Вернуть имя представления
     }
 
 //    /*First method on start application*/
@@ -29,7 +29,7 @@ public class MainController {
 //        return modelAndView;
 //    }
 //
-//    /*как только на index.jsp подтвердится форма
+//    /*как только на home.jsp подтвердится форма
 //    <spring:form method="post"  modelAttribute="userJSP" action="check-user">,
 //    то попадем вот сюда
 //     */
