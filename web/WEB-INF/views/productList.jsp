@@ -13,7 +13,13 @@
 <body>
 
 productList<br>
-${product.name}
+${product.id}<br>
+${product.name}<br>
+${product.comment}<br>
+${product.price}<br>
+${product.cateroty}<br>
+${product.county}<br>
+
 <br>
 </body>
 </html>

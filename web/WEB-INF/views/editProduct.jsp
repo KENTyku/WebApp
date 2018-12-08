@@ -16,14 +16,13 @@
 <dif>
     <h1>Добавить товар в базу или отредактировать имеющийся</h1>
     <form:form method="POST" modelAttribute="product">
-        <%--<pf:form action = "/WebApp/createProduct" method = "POST" modelAttribute="product">--%>
-        <table border="0">
+        <table border="10">
 
-            <%--<tr>--%>
-                <%--<td><b>id товара:</b></td>--%>
-                <%--<td><form:input path="id" type="text" id="id_editProduct"--%>
-                                <%--value="введите id" size="70"/></td>--%>
-            <%--</tr>--%>
+            <tr>
+                <td><b>id товара:</b></td>
+                <td><form:input path="id" type="text" id="id_editProduct"
+                                value="введите id" size="70"/></td>
+            </tr>
 
             <tr>
                 <td><b>Наименование:</b></td>
@@ -31,29 +30,29 @@
                                 value="наименование" size="65"/></td>
             </tr>
 
-            <%--<tr>--%>
-                <%--<td><b>Описание:</b></td>--%>
-                <%--<td><form:input path="comment" type="text" id="comment_editProduct"--%>
-                                <%--value="описание" size="200"/></td>--%>
-            <%--</tr>--%>
+            <tr>
+                <td><b>Описание:</b></td>
+                <td><form:input path="comment" type="text" id="comment_editProduct"
+                                value="описание" size="200"/></td>
+            </tr>
 
-            <%--<tr>--%>
-                <%--<td><b>Цена:</b></td>--%>
-                <%--<td><form:input path="price" type="text" id="price_editProduct"--%>
-                                <%--value="цена" size="65"/></td>--%>
-            <%--</tr>--%>
+            <tr>
+                <td><b>Цена:</b></td>
+                <td><form:input path="price" type="text" id="price_editProduct"
+                                value="цена" size="65"/></td>
+            </tr>
 
-            <%--<tr>--%>
-                <%--<td><b>Категория:</b></td>--%>
-                <%--<td><form:input path="cateroty" type="text" name="category_editProduct"--%>
-                                <%--value="категория" size="65"/></td>--%>
-            <%--</tr>--%>
+            <tr>
+                <td><b>Категория:</b></td>
+                <td><form:input path="cateroty" type="text" name="category_editProduct"
+                                value="категория" size="65"/></td>
+            </tr>
 
-            <%--<tr>--%>
-                <%--<td><b>Производитель:</b></td>--%>
-                <%--<td><form:input path="county" type="text" name="country_editProduct"--%>
-                                <%--value="Производитель" size="65"/></td>--%>
-            <%--</tr>--%>
+            <tr>
+                <td><b>Производитель:</b></td>
+                <td><form:input path="county" type="text" name="country_editProduct"
+                                value="Производитель" size="65"/></td>
+            </tr>
 
                 <%--<tr>--%>
                 <%--<td>Parameter choice</td>--%>
