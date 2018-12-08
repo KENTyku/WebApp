@@ -11,6 +11,7 @@
     <title>TEST</title>
   </head>
   <body>
-Hello!!!!!!!!!!!   ${spittles}
+Hello!!!!!!!!!!!   ${catName}<br>
+<a href="/WebApp/createProduct?new">Добавить/Изменить продукт</a><br>
   </body>
 </html>

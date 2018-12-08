@@ -19,7 +19,7 @@ public class MainController {
     @RequestMapping({"/", "/home"}) // Обрабатывать запросы на получение  главной страницы
     // @RequestMapping(value = "/", method = RequestMethod.GET) // Обрабатывать запросы на получение  главной страницы
     public String showHomePage(Map<String, Object> model) {
-        model.put("spittles", "Fire"); //Добавить сообщения в модель
+        model.put("catName", "Barsic"); //Добавить сообщения в модель
         return "home"; // Вернуть имя представления
     }
 }

@@ -1,37 +1,47 @@
 package ru.kentyku.webapp;
 
-import javax.validation.Valid;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-@RequestMapping({"/createProduct"})
+//@RequestMapping({"/createProduct"})
 public class editController {
 
 
-    @RequestMapping(method = RequestMethod.GET, params = "new")
+    @RequestMapping(value = "/createProduct", method = RequestMethod.GET, params = "new")
     // Обрабатывать запросы на получение  формы по GET запросу формата: URL/createProduct?new
-    public String createProduct(Model model) {
-        Product product = new Product();
-        model.addAttribute(product); //Добавить объкта в модель(формирует индексы из имени объекта, или listName)
+    public String createProduct(@ModelAttribute("product") Product product) {
+//    public String createProduct(@ModelAttribute("product") Product product ,Model model) {
+//        product=new Product();
+//        model.addAttribute(product);
+
         return "editProduct"; // Вернуть имя представления
     }
 
     @RequestMapping(value = "/createProduct", method = RequestMethod.POST)
-    public String addSpitterFromForm() {
+    public String saveProduct(Product product, Model model) {
+//    public String saveProduct() {
 //        if (bindingResult.hasErrors()) {
 //// Проверка ошибок
 //            return "editProduct";
 //        }
-//        spitterService.saveSpitter(spitter);
+
+//        Обрабатываем результаты
+
+        String name = product.getName();
+        System.out.println(name);
+        model.addAttribute(product);
+
+
+//                return "home"; // Переадресовать
 // Сохранить объект Spitter
+//        spitterService.saveSpitter(spitter);
+
 //        return "redirect:/createProduct/" + spitter.getUsername(); // Переадресовать
-//        return "redirect:/createProduct/" + "list"; // Переадресовать
-        return "home"; // Переадресовать
+        return "productList";
 // после запроса POST
     }
 }
