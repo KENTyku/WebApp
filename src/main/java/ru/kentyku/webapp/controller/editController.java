@@ -1,4 +1,4 @@
-package ru.kentyku.webapp;
+package ru.kentyku.webapp.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

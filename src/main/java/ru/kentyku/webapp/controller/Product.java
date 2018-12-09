@@ -1,4 +1,4 @@
-package ru.kentyku.webapp;
+package ru.kentyku.webapp.controller;
 
 public class Product {
     long id;
