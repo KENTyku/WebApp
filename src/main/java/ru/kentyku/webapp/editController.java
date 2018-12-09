@@ -13,16 +13,15 @@ public class editController {
 
     @RequestMapping(value = "/createProduct", method = RequestMethod.GET, params = "new")
     // Обрабатывать запросы на получение  формы по GET запросу формата: URL/createProduct?new
-    public String createProduct(@ModelAttribute("product") Product product) {
-//    public String createProduct(@ModelAttribute("product") Product product ,Model model) {
-//        product=new Product();
-//        model.addAttribute(product);
-
+//    public String createProduct(@ModelAttribute("product") Product product) {
+    public String createProduct(@ModelAttribute("product") Product product ,Model model) {
+        product=new Product();
+        model.addAttribute(product);
         return "editProduct"; // Вернуть имя представления
     }
 
     @RequestMapping(value = "/createProduct", method = RequestMethod.POST)
-    public String saveProduct(Product product, Model model) {
+    public String saveProduct(Product product) {
 //    public String saveProduct() {
 //        if (bindingResult.hasErrors()) {
 //// Проверка ошибок
@@ -33,7 +32,7 @@ public class editController {
 
         String name = product.getName();
         System.out.println(name);
-        model.addAttribute(product);
+//        model.addAttribute(product);
 
 
 //                return "home"; // Переадресовать

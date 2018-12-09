@@ -15,7 +15,7 @@
 <body>
 <dif>
     <h1>Добавить товар в базу или отредактировать имеющийся</h1>
-    <form:form method="POST" modelAttribute="product">
+    <form:form action="/WebApp/createProduct" method="POST" modelAttribute="product">
         <table border="10">
 
             <tr>
